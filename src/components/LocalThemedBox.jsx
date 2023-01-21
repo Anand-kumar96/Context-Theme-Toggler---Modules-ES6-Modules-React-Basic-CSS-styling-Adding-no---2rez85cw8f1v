@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { ThemeContext } from './ThemeProvider';
+import '../styles/App.css';
 
 const LocalThemedBox = () => {
     const [localTheme, setLocalTheme] = useState('light');
-    const { theme, setTheme } = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
 
     useEffect(() => {
         setLocalTheme(theme);
@@ -11,10 +12,10 @@ const LocalThemedBox = () => {
 
     const handleClick = () => {
         if (localTheme === 'light') {
-            setTheme('dark');
+            setLocalTheme('dark');
             return;
         }
-        setTheme('light');
+        setLocalTheme('light');
     }
 
 
@@ -28,18 +29,18 @@ const LocalThemedBox = () => {
                 }
             }
             id="local-themed-box"
-            className={localTheme === 'light' ? 'txt-light' : 'txt-dark'}
+            className={localTheme === 'light' ? 'txt-light bg-light' : 'txt-dark bg-dark'}
         >
             <p
                 id='local-themed-text-container'
-                className={localTheme === 'light' ? 'txt-light' : 'txt-dark'}
+                className={localTheme === 'light' ? 'txt-light bg-light' : 'txt-dark bg-dark'}
             >
                 Some Text
             </p>
             <button
                 onClick={handleClick}
                 id='local-theme-toggler'
-                className={localTheme === 'light' ? 'dark' : 'light'}
+                className={localTheme === 'light' ? 'btn btn-light' : 'btn btn-dark'}
             >
                 Toggle local theme to {localTheme === 'light' ? 'dark' : 'light'}
             </button>

@@ -11,7 +11,7 @@ const Page = () => {
             id="themed-page">
             <p
                 id="themed-text-container"
-                className={theme === "light" ? "txt-light" : "txt-dark"}
+                className={theme === "light" ? "txt-light bg-light" : "txt-dark bg-dark"}
             >
                 lorem ipsum dolor iterit n stuff
             </p>
