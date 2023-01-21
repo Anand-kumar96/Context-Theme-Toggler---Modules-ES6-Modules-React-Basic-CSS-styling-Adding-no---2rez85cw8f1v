@@ -7,7 +7,7 @@ const Page = () => {
     const { theme } = useContext(ThemeContext);
     return (
         <div
-            className={theme === "light" ? "container bg-light" : "container bg-dark"}
+            className={`container ${theme === "light" ? "bg-light" : "bg-dark"}`}
             id="themed-page">
             <p
                 id="themed-text-container"
@@ -16,7 +16,7 @@ const Page = () => {
                 lorem ipsum dolor iterit n stuff
             </p>
             <button
-                className={theme === "light" ? "btn-light" : "btn-dark"}
+                className={`btn ${theme === "light" ? "btn-light" : "btn-dark"}`}
                 id="themed-button"
             >Themed Button</button>
             <LocalThemedBox />
