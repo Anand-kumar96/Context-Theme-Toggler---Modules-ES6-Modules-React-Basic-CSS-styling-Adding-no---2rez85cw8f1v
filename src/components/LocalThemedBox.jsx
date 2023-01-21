@@ -29,18 +29,18 @@ const LocalThemedBox = () => {
                 }
             }
             id="local-themed-box"
-            className={localTheme === 'light' ? 'txt-light bg-light' : 'txt-dark bg-dark'}
+            className={localTheme === 'light' ? 'bg-light' : 'bg-dark'}
         >
             <p
                 id='local-themed-text-container'
-                className={localTheme === 'light' ? 'txt-light bg-light' : 'txt-dark bg-dark'}
+                className={localTheme === 'light' ? 'txt-light' : 'txt-dark'}
             >
                 Some Text
             </p>
             <button
                 onClick={handleClick}
                 id='local-theme-toggler'
-                className={localTheme === 'light' ? 'btn btn-light' : 'btn btn-dark'}
+                className={localTheme === 'light' ? 'btn-light' : 'btn-dark'}
             >
                 Toggle local theme to {localTheme === 'light' ? 'dark' : 'light'}
             </button>

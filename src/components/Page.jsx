@@ -16,7 +16,7 @@ const Page = () => {
                 lorem ipsum dolor iterit n stuff
             </p>
             <button
-                className={theme === "light" ? "btn btn-light" : "btn btn-dark"}
+                className={theme === "light" ? "btn-light" : "btn-dark"}
                 id="themed-button"
             >Themed Button</button>
             <LocalThemedBox />
