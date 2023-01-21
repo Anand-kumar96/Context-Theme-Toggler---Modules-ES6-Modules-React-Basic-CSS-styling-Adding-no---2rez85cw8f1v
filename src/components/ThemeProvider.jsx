@@ -12,4 +12,4 @@ const ThemeProvider = (props) => {
     )
 }
 
-export { ThemeProvider, ThemeContext }
+export { ThemeProvider }

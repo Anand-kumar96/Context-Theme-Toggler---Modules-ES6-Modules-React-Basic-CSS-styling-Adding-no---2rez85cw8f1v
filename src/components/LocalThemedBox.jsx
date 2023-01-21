@@ -3,7 +3,7 @@ import { ThemeContext } from './ThemeProvider';
 
 const LocalThemedBox = () => {
     const [localTheme, setLocalTheme] = useState('light');
-    const { theme } = useContext(ThemeContext);
+    const { theme, setTheme } = useContext(ThemeContext);
 
     useEffect(() => {
         setLocalTheme(theme);
@@ -11,20 +11,22 @@ const LocalThemedBox = () => {
 
     const handleClick = () => {
         if (localTheme === 'light') {
-            setLocalTheme('dark');
+            setTheme('dark');
             return;
         }
-        setLocalTheme('light');
+        setTheme('light');
     }
 
 
     return (
-        <div style={
-            {
-                width: '200px',
-                height: '200px',
-                border: '2px solid green'
-            }}
+        <div
+            style={
+                {
+                    width: '200px',
+                    height: '200px',
+                    border: '2px solid green'
+                }
+            }
             id="local-themed-box"
             className={localTheme === 'light' ? 'txt-light' : 'txt-dark'}
         >
