@@ -9,7 +9,6 @@ const ThemeToggleButton = () => {
             setTheme("dark");
             return;
         }
-
         setTheme("light");
     };
 
