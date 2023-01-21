@@ -16,7 +16,7 @@ const ThemeToggleButton = () => {
         <button
             id="global-theme-toggler"
             onClick={handleButtonClick}
-            className={theme === "light" ? "btn btn-light" : "btn btn-dark"}
+            className={theme === "light" ? "btn-light" : "btn-dark"}
         >
             Switch to {theme === "light" ? "dark" : "light"} theme
         </button>
